@@ -2,3 +2,10 @@ body {
   margin-left: 15%;
   width: 70%;
 }
+
+#text {
+	margin-left: 20%; /* Отступ слева */
+  width: 60%; /* Ширина слоя */
+  background: #ddd;
+  color: #0f0;
+}
