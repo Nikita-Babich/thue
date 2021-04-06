@@ -7,7 +7,7 @@ script {
   display: block;
 }
 
-block1 {
+.block1 {
   margin-left: 15%;
   width: 70%;
   background: #ddd;
@@ -15,10 +15,10 @@ block1 {
   border: 3px dashed #0f1;
 }
 
-output1 {
+#output1 {
   margin-left: 15%;
   width: 70%;
-  background: #ddd;
+  background: #ddf;
   color: #0f0;
   border: 3px dashed #0f1;
 }
