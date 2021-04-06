@@ -4,7 +4,7 @@ body {
 }
 
 script {
-    display: block;
+  display: block;
 }
 
 #text {
@@ -15,7 +15,6 @@ script {
 }
 
 .success {
-	display: inline;
 	border-radius: 25px;
   border: 3px solid #73AD21;
   padding: 20px; 
