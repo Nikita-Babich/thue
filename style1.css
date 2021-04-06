@@ -3,6 +3,10 @@ body {
   width: 70%;
 }
 
+script {
+    display: block;
+}
+
 #text {
   margin-left: 20%; /* Отступ слева */
   width: 60%; /* Ширина слоя */
