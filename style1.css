@@ -15,6 +15,14 @@ block1 {
   border: 3px dashed #0f1;
 }
 
+output1 {
+  margin-left: 15%;
+  width: 70%;
+  background: #ddd;
+  color: #0f0;
+  border: 3px dashed #0f1;
+}
+
 #text {
   margin-left: 20%; /* Отступ слева */
   width: 60%; /* Ширина слоя */
