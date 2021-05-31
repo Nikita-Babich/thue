@@ -27,7 +27,48 @@ Never make left side of a rule equal to empty string.<br>
   <textarea id="input">Initial string here 1+ 2+ 3+</textarea>
   <textarea id="output">Results (output, don't touch)</textarea>
   <textarea id="errors">Errors and notes</textarea>
-<script src="thue.js"> </script>
+<script> 
+function checker() {
+ var val = document.getElementById('rules').value;
+ document.getElementById('output').innerHTML="Вы ввели: "+val;
+}
+
+function run() {
+	var ruleBox = document.getElementById('rules');
+	var initBox = document.getElementById('input');
+	var resultBox = document.getElementById('output');
+	var errorBox = document.getElementById('errors');
+	
+	var ruleString = ruleBox.value;
+	var initString = initBox.value;
+	var result = '';
+	var errors = '';
+	
+	ruleArray = ruleString.split('|');
+	ruleArray = ruleArray.filter(item => item !== '')
+	errorBox.value = ruleArray;
+	p = console.log;
+	//p(ruleArray);
+	
+	ruleObject = {};
+	ruleArray.forEach(element => {
+		var [a,b] = element.split('=');
+		ruleObject[a] = b;
+		});
+	//p(ruleObject);
+	
+	if (typeof toPrint == "undefined") {var toPrint = true};
+	
+	while(Object.keys(ruleObject).some( a=>initString.includes(a) )){
+		for (const [key, value] of Object.entries(ruleObject)) {
+			initString = initString.replace(key, value);
+		};
+		if (toPrint) {result += initString +'\n'; resultBox.value = result};
+	}
+	
+	resultBox.value = result;
+}
+</script>
 <div style="width: 80%; margin-left: auto; margin-right: auto"> 
 Try inserting these (defines increment function for positive numbers and we can sum. Delete newline \n): <br>
 1+=2|2+=3|3+=4|4+=5|5+=6|6+=7|7+=8|8+=9|9+=+0|0+=1|_+=1
