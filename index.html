@@ -1,10 +1,37 @@
-<head>
-  <link rel="stylesheet" href="style1.css">
-</head>
+<style>
+ textarea {
+	width: 80%; 
+	margin-left: 10%;
+    margin-right: 10%;}
+ * { font-size: calc(0.5em + 1vw);}
+
+</style>
 <body>
-  hello, here i discover and experiment with html+css+javascript
-  <div class="block1" id="output1"></div>
-  text after script affected?
-  <div class="success"> Зеленая обертка </div>
+
+<div style="width: 80%; margin-left: auto; margin-right: auto"> 
+1. First textbox is for Rules. Rules are separated by "|" (pipe). 
+Substring in rule to the left from "=" is replaced with whatever is to its right. 
+Never make left side of a rule equal to empty string.<br>
+2. Second textbox is for initial string, which will be modified. <br>
+3. You will see the calculation results in the third textbox.  <br>
+4. Forth textbox is for debugging purposes, don't pay attention to it.
+</div>
+<div>
+  <input type="button" value="Run" onclick="run();" style="margin-left: 45%;">
+  
+  <input type="checkbox" id="one" onchange="toPrint = document.getElementById('one').checked;">
+  Print intermediate results
+  <br>
+</div>
+  <textarea id="rules">Place rules here=_|1+=2|2+=3|3+=4</textarea>
+  <textarea id="input">Initial string here 1+ 2+ 3+</textarea>
+  <textarea id="output">Results (output, don't touch)</textarea>
+  <textarea id="errors">Errors and notes</textarea>
+<script src="thue.js"> </script>
+<div style="width: 80%; margin-left: auto; margin-right: auto"> 
+Try inserting these (defines increment function for positive numbers and we can sum. Delete newline \n): <br>
+1+=2|2+=3|3+=4|4+=5|5+=6|6+=7|7+=8|8+=9|9+=+0|0+=1|_+=1
+|9/=8/+|8/=7/+|7/=6/+|6/=5/+|5/=4/+|4/=3/+|3/=2/+|2/=1/+|1/=+|.+=+<br>
+_89.9/<br>
+</div>
 </body>
-<script src="main.js"></script>
